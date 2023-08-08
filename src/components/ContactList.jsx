@@ -36,15 +36,13 @@ export default function ContactList({ setSelectedContactId }) {
           <td>Email</td>
           <td>Phone</td>
         </tr>
-        {contacts.map((contact) => {
-          return (
-            <ContactRow
-              key={contact.id}
-              contact={contact}
-              setSelectedContactId={setSelectedContactId}
-            />
-          );
-        })}
+        {contacts.map((contact) => (
+          <ContactRow
+            key={contact.id}
+            contact={contact}
+            setSelectedContactId={setSelectedContactId} // Pass the prop here
+          />
+        ))}
       </tbody>
     </table>
   );

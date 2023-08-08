@@ -7,12 +7,15 @@ export default function App() {
   const [selectedContactId, setSelectedContactId] = useState(null);
 
   return (
-    <>
+    <div className="App">
+      <h1>Contact App</h1>
       {selectedContactId ? (
-        <div>Selected Contact View</div>
+        <div>
+          Selected Contact View
+        </div>
       ) : (
         <ContactList setSelectedContactId={setSelectedContactId} />
       )}
-    </>
+    </div>
   );
 }
